@@ -13,11 +13,7 @@ if(isset($_POST['name']) && isset($_POST['phone']) && isset($_POST['email']) && 
            }
       }
      else{
-         $msg->name = $name;
-         $msg->phone = $phone;
-         $msg->subject = 'Mail From Contact Form';
-         $msg->message = $message;
          $subject ='Mail From Contact Form';
-         echo $msg->send_mail($name, $email,$subject);
+         echo $msg->sendMail($email,$subject, $message, "The Love of God Ministry");
      }
 }
