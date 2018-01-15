@@ -1,0 +1,17 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Church\\": "app/"
+    },
+    "files": [
+      "support/helpers.php",
+      "support/path.php"
+    ]
+  },
+  "require": {
+    "vlucas/phpdotenv": "^2.4",
+    "phpmailer/phpmailer": "^6.0",
+    "jasny/auth": "^1.0",
+    "hashids/hashids": "^2.0"
+  }
+}
