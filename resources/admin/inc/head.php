@@ -16,7 +16,7 @@
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
-        <div class="col-md-2 col-sm-3" id="sidebar">
+        <div class="col-md-2 col-sm-3" id="sidebar" style="overflow: hidden">
             <!-- Logo Box -->
             <div class="logo-box">
                 <a href="<?= url('admin'); ?>">

@@ -1,58 +1,40 @@
-<?php require resource_admin('inc/head'); ?>
+<?php
+require resource_admin('inc/head');
+$db = new \Church\Data\DB;
+$getBible = $db->getAllDataOrder("bible_verse", "`bible_verse`.`day` DESC");
+?>
     <h1>Bible Verse of the Day</h1>
-    <div class="dataTables_wrapper">
-        <table id="example" class="display" cellspacing="0" width="100%">
+    <div class="dataTables_wrapper panel" style="padding: 30px;">
+        <table id="example" class="display table table-striped" cellspacing="0" width="100%">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Bible Verses</th>
+                <th>Bible Contents</th>
+                <th>Date</th>
             </tr>
             </thead>
             <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>Bible Verses</th>
+                <th>Bible Contents</th>
+                <th>Date</th>
             </tr>
             </tfoot>
             <tbody>
+            <?php foreach ($getBible as $row): ?>
             <tr>
-                <td>Tiger Nixon</td>
-                <td>System Architect</td>
-                <td>Edinburgh</td>
-                <td>61</td>
-                <td>2011/04/25</td>
-                <td>$320,800</td>
+                <td><?= ucfirst($row['bible_verse']); ?></td>
+                <td><?= ucfirst($row['bible_content']); ?></td>
+                <td><?= format_date($row['day']); ?></td>
             </tr>
-            <tr>
-                <td>Garrett Winters</td>
-                <td>Accountant</td>
-                <td>Tokyo</td>
-                <td>63</td>
-                <td>2011/07/25</td>
-                <td>$170,750</td>
-            </tr>
-            <tr>
-                <td>Ashton Cox</td>
-                <td>Junior Technical Author</td>
-                <td>San Francisco</td>
-                <td>66</td>
-                <td>2009/01/12</td>
-                <td>$86,000</td>
-            </tr>
+            <?php endforeach; ?>
             </tbody>
         </table>
     </div>
     <div class="form-box">
         <div id="response" class="alert alert-danger"></div>
         <form method="post" action="<?= url('form'); ?>" id="form">
+            <h3>Add Bible Verse</h3>
             <div class="form-group">
                 <input type="text" class="form-control empty" name="verse" id="name" placeholder="Enter the Bible verse: Matthew 1:1" />
                 <span class="input-response"></span>
