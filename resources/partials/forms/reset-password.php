@@ -1,6 +1,9 @@
 <form class="form-signin" action="<?= url('reset') . '?token=' .$token; ?>" method="post" id="form">
-    <div id="response" class="alert alert-danger"></div>
+
     <h2 class="form-signin-heading">Please Reset Password</h2>
+
+    <div class="<?= empty($errmsg) ? '' : 'alert alert-danger' ?> "><?= $errmsg ?></div>
+
     <div class="form-group">
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>

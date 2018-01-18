@@ -9,6 +9,9 @@ body{
     margin: 0;
     padding: 0;
 }
+.hide{
+    display: none;
+}
 .container-box{
     padding: 50px 0;
 }
@@ -26,22 +29,30 @@ body{
 
 /* Header */
 #header{
-    background-color: #424242;
-    height: 70px;
+    background-color: transparent;
+    height: 80px;
     padding: 5px 0;
     margin-bottom: 0;
     width:100%;
     z-index: 999;
-    position: relative;
+    position: absolute;
+}
+#nav{
+    padding-top: 10px;
+    padding-right: 40px;
 }
 #nav li a:link, #nav li a:visited{
-    color: #81d4fa;
+    color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
 }
 #nav li a:hover, #nav li a:active, #nav li a:focus{
-    background-color: #81d4fa;
+    background-color: #bb4e02;
+    color: #ffffff;
+}
+#nav li#current a{
+    background-color: #bb4e02;
     color: #ffffff;
 }
 .menu-toggle{
@@ -58,7 +69,7 @@ body{
     color: #000;
 }
 #mobile-nav{
-    background-color:rgba(66,66,66,0.5);
+    background-color: rgba(0,0,0,0.6);
     margin: 0;
     width: 100%;
     text-align: center;
@@ -126,7 +137,7 @@ body{
     transition: all 350ms linear;
 }
 .banner-pages{
-    height: 270px;
+    height: 300px;
     overflow-y: hidden;
 }
 /* Pastor's Msg*/
@@ -134,7 +145,7 @@ body{
     margin-top: 50px;
 }
 #pastor-msg .thumbnail .image-box{
-    height: 250px;
+    height: 300px;
     overflow: hidden;
     padding-bottom: 5px;
     display: block;
@@ -144,9 +155,9 @@ body{
     width: 100%;
 }
 #pastor-msg .thumbnail .caption{
-    background-color: #26a69a;
+    background-color: #302529;
     text-align: center;
-    color: #ffffff;
+    color: #e7bd67;
 }
 .msg{
     font-size: 18px;
@@ -165,7 +176,7 @@ body{
     background-image: url('/resources/assets/images/bg2.jpg');
     background-attachment: fixed;
     height: 300px;
-    color: #81d4fa;
+    color: #ffffff;
     line-height: 50px;
     text-align: center;
     padding: 30px 10px;
@@ -188,7 +199,7 @@ body{
 }
 #gototop a{
     display: block;
-    background: #81d4fa;
+    background: #bb4e02;
     color: #fff;
     text-align: center;
     width: 50px;
@@ -198,10 +209,20 @@ body{
     transition: 350ms all cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 #gototop a:hover{
-    color: #81d4fa;
+    color: #bb4e02;
     background-color: transparent;
-    border-bottom: #81d4fa solid 5px;
+    border-bottom: #bb4e02 solid 5px;
     transform: scale(1.2);
+}
+#footer-socials a{
+    color: #bb4e02;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+}
+#footer-socials a:hover, #footer-socials a:active, #footer-socials a:focus{
+    background-color: #bb4e02;
+    color: #0c0c0c;
 }
 
 /* Contact Page */
@@ -274,4 +295,52 @@ body{
     background-color: red;
     color: white;
     display: none;
+}
+/* Messages*/
+#msg-box {
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 0;
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+#msg-box:hover{
+    transform: scale(1.1);
+    display: block;
+    border-bottom: 5px #bb4e02 solid;
+}
+#msg-box a {
+    background-color: #bb4e02;
+    color: #ffffff;
+    display: block;
+    height: 270px;
+    padding: 30px 20px;
+    position: relative;
+}
+#msg-box a:hover{
+    text-decoration: none;
+    background-color: #dcdcdc;
+    color: #bb4e02;
+}
+.msg-title{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.msg-time{
+    position: absolute;
+    bottom:30px;
+    right:0;
+    left:0;
+}
+.msg-body{
+    font-size: 16px;
+    line-height: 30px;
+
+}
+.blog-post {
+    margin-bottom: 60px;
+}
+.blog-post-meta {
+    margin-bottom: 20px;
+    color: #999;
 }

@@ -2,6 +2,8 @@
 
 $token = $_GET['token'];
 
+$errmsg = '';
+
 if ($_SERVER['REQUEST_METHOD'] == "POST")
 {
     $email = $_POST['email'];
@@ -9,11 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST")
     $password2 = $_POST['password_confirm'];
 
     if($password == $password2) {
-        (new \Church\CMS\Authentication())->resetPassword($token, $email, $password);
+        return (new \Church\CMS\Authentication())->resetPassword($token, $email, $password);
+
+//        $response = json_decode($response, true);
     }
 
     else {
-        echo "password does not match.";
+        $errmsg = "password does not match.";
     }
 }
 

@@ -15,7 +15,8 @@
 	<title>The Love of God Ministry | Community where Everybody is Important</title>
     <link rel="icon" href="<?= resource_asset('images/loveicon.ico') ?>">
 	<!-- CSS LINK -->
-	<link rel="stylesheet" type="text/css" href="<?= resource_asset('css/bootstrap.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= resource_asset('css/bootstrap.css'); ?>">
+    <link rel="stylesheet" type="text/css" href="<?= resource_asset('css/magnific-popup.css'); ?>">
 	<link rel="stylesheet" type="text/css" href="<?= resource_asset('css/font-awesome.css'); ?>">
     <link rel="stylesheet" type="text/css" href="<?= resource_asset('css/app.css'); ?>"
 </head>

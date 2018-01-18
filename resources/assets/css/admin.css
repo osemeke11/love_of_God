@@ -8,6 +8,7 @@ body{
     overflow-x: hidden;
     margin: 0;
     padding: 0;
+    background-color: #000;
 }
 .heading-ct{
     text-align: center;
@@ -54,9 +55,14 @@ body{
 #sidebar{
     background-color: rgb(0,0,0);
     padding:0;
-    height: 100%;
 }
 
 #sidebar .logo-box{
     padding:10px;
+}
+
+#main{
+    background-color: #ffffff;
+    min-height: 100%;
+    margin-bottom: 0;
 }

@@ -9,9 +9,6 @@ var Form = {
                     // console.log(document.getElementById('url'));
                     Form.callbackhandler(response);
                 }
-
-
-
             })
             .catch(function (error) {
 

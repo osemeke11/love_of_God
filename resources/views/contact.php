@@ -15,26 +15,23 @@
         <div class="row">
             <div class="col-md-offset-1 col-md-6 col-sm-offset-1 col-sm-6">
                 <!-- Google Map -->
-                <img width="100%" src="https://maps.googleapis.com/maps/api/staticmap?center=glo+world+ibadan&zoom=15&scale=1&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7Cglo+world+ibadan" alt="Google Map of glo world ibadan">
+                <img width="100%" src="https://maps.googleapis.com/maps/api/staticmap?center=restoration+chapel+cmsc&zoom=17&scale=1&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7Crestoration+chapel+cmsc" alt="Google Map of restoration chapel cmsc">
             </div>
             <div class="col-md-4 col-sm-4" id="contact-info">
                 <!-- Contact Info -->
                 <div>
                     <p><i class="fa fa-2x fa-map-marker"></i></p>
                     <p>
-                        3, Ajobo Close,<br> Elewura, Challenge,<br> Ibadan.
+                        Ife/Iwo Road Express Junction,<br> Behind Lamidi Ajadi Tyre Services,<br> Iwo Road Ibadan.
                     </p>
                 </div>
                 <div>
                     <p><i class="fa fa-2x fa-envelope"></i></p>
-                    <p>info@tlogm.com</p>
-                    <p>prayer.request@tlogm.com</p>
-                    <p>enquiry@tlogm.com</p>
+                    <p>info@restorationchapelcsmc.com</p>
                 </div>
                 <div>
                     <p><i class="fa fa-2x fa-phone"></i></p>
-                    <p>+234 - 7064682596</p>
-                    <p>+234 - 8079035018</p>
+                    <p>+234 - 8034303447</p>
                 </div>
             </div>
         </div>

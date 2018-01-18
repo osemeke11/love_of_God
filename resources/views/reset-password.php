@@ -62,8 +62,5 @@
     <?php require resource_partial('forms/reset-password'); ?>
 </div>
 
-<script src="<?= resource_asset('js/axios.min.js'); ?>"></script>
-<script src="<?= resource_asset('js/form.js'); ?>"></script>
-<script src="<?= resource_asset('js/admin.js'); ?>"></script>
 </body>
 </html>

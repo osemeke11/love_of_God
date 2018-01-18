@@ -14,10 +14,15 @@
     <!-- About us -->
     <div class="container-box container-fluid" id="about">
         <div class="row">
-            <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
-                <?php foreach ($getAboutUs as $row): ?>
-                <p class="msg"><?= $row['page_content']; ?></p>
-                <?php endforeach; ?>
+            <div class="col-md-7 col-md-offset-1 col-sm-6 col-sm-offset-1">
+                <p class="msg"><?= $getAboutUs['page_content']; ?></p>
+            </div>
+            <div class="col-md-3 col-sm-4">
+                <h3>HOT LINK</h3>
+                <ul>
+                    <li><a href="<?= url('about'); ?>">About Us</a></li>
+                    <li><a href="<?= url('contact'); ?>">Contact Us</a></li>
+                </ul>
             </div>
         </div>
     </div>

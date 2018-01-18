@@ -58,12 +58,11 @@
 </head>
 
 <body>
-<div class="container-fluid">
-    <?php require resource_partial('forms/login'); ?>
-</div>
+    <div class="container-fluid">
+        <?php require resource_partial('forms/login'); ?>
+    </div>
 
-<script src="<?= resource_asset('js/axios.min.js'); ?>"></script>
-<script src="<?= resource_asset('js/form.js'); ?>"></script>
-<script src="<?= resource_asset('js/admin.js'); ?>"></script>
+<!--    <script src="--><?//= resource_asset('js/axios.min.js'); ?><!--"></script>-->
+<!--    <script src="--><?//= resource_asset('js/form.js'); ?><!--"></script>-->
 </body>
 </html>

@@ -10,6 +10,15 @@ class FormValidate
 	public $db;	// To Access Database
 	public $dateValue; // Date Value
 
+    // Check Empty
+    public function checkEmpty($input, $elem){
+        if(strlen($input) < 1){
+            $this->error[] = "$elem is empty.";
+        }
+        else{
+            return $input;
+        }
+    }
 	// Name Validation Method
 	public function name($name)
 	{
@@ -99,7 +108,7 @@ class FormValidate
 			else {
 				$this->error[] = "Check the date again";
 			}
-	  }
+	    }
 		else{
 			if($bool === true){
 				if(strlen($month) == 0){ $input = "month"; }
@@ -110,6 +119,19 @@ class FormValidate
 			}
 		}
 	}
+
+    // Date Validation one Parameter
+    public function checkDateInput($date){
+        if(preg_match("/^(\d{4})-(\d{2})-(\d{2})$/", $date, $matches))
+        {
+            if(checkdate($matches[2], $matches[3], $matches[1]))
+            {
+                return $date;
+            }else{
+                $this->error[] = "Please Fill the Date";
+            }
+        }
+    }
 
 
 	// User's Details Availability

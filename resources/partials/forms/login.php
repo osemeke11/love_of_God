@@ -1,6 +1,7 @@
 <form class="form-signin" action="<?= url('sign-in'); ?>" method="post">
-    <div id="response" class="alert alert-danger"></div>
+
     <h2 class="form-signin-heading">Please sign in</h2>
+    <div class="<?= empty($errmsg) ? '' : 'alert alert-danger' ?> "><?= $errmsg ?></div>
     <div class="form-group">
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>

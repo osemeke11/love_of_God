@@ -33,8 +33,7 @@ class Authentication
         $user = $this->auth->login($email, $password);
 
         if(is_null($user)) {
-            echo "We couldn't find credentials matching our records";
-            exit();
+            return "We couldn't find credentials matching our records";
         }
 
         return header("Location:" . url('admin'));
@@ -122,15 +121,31 @@ class Authentication
 
         if (!$user) {
             http_response_code(400);
-            echo "The token is not valid";
-            exit();
+            $errormsg = "The token is not valid";
+
+            return json_encode([
+                "code" => 400,
+                "status" => 'error',
+                "message" => "The token is not valid",
+                "redirect" => null
+
+            ]);
+            //exit();
         }
 
         $this->db->updateData('admin', "password = '" . $this->auth->hashPassword($password) . "'", "id ='" . $user->id ."'");
 
-        echo "Password Reset Successfully!!";
+//        echo "Password Reset Successfully!!";
 
-        return header("Location:" . url('sign-in'));
+        return json_encode([
+            "code" => 200,
+            "status" => 'success',
+            "message" => "Password Reset Successfully!!",
+            "redirect" => url("sign-in")
+
+        ]);
+
+//        return header("Location:" . url('sign-in'));
 
     }
 }

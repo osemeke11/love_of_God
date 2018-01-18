@@ -23,9 +23,11 @@ var App = {
         var scrollTop = window.scrollY;
         if (scrollTop > "300") {
             header.style.position = "fixed";
+            header.style.backgroundColor = "#424242";
         }
         else {
             header.style.position = "absolute";
+            header.style.backgroundColor = "transparent";
         }
     },
 
